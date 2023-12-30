@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Final Test - Nelson Le - 301064831</string>
+    <string name="logo">Logo</string>
+    <string name="please_choose_a_place">Select a Place:</string>
+    <string name="please_choose_a_category">Select a Category:</string>
+    <string name="select">Select</string>
+    <string name="place_name">Place Name</string>
+    <string name="place_address">Place Address</string>
+    <string name="confirm">Confirm</string>
+</resources>

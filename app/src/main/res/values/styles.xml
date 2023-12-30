@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme.Nelsonhongle_COMP304_HandsOn_Test2_W23" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/light_brown</item>
+        <item name="colorPrimaryDark">@color/light_grey</item>
+        <item name="colorAccent">@color/white</item>
+
+    </style>
+</resources>

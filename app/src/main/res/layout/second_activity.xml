@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacesListActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="348dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/main_logo" />
+
+    <!-- TextView to display selected place -->
+    <TextView
+        android:id="@+id/placeCategoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        android:text="@string/please_choose_a_place"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/selectedPlaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/yourNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/placeCategoryTextView"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical|horizontal">
+
+        <!-- RecyclerView and other content inside the NestedScrollView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Other views or content to be scrollable -->
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Select Button -->
+    <Button
+        android:id="@+id/selectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/select"/>
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/selectButton"
+        android:layout_marginStart="16dp"
+        android:layout_alignBaseline="@id/selectButton"
+        android:text="@string/confirm" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        app:elevation="6dp"
+        android:backgroundTint="@color/light_grey"
+        app:fabSize="normal"/>
+
+    <!-- Scroll Up Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        app:elevation="6dp"
+        android:backgroundTint="@color/light_grey"
+        app:fabSize="normal"/>
+
+</RelativeLayout>
